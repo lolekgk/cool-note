@@ -11,3 +11,6 @@ def main_page():
 @app.route('/note', methods=['GET', 'POST'])
 def note():
     return 'This is note page!'
+
+if __name__ == '__main__':
+    app.run(debug=True)
