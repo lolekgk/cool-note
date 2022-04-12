@@ -5,12 +5,11 @@
     <title>Cool Note</title>
 </head>
     <body>
-        <h2>My note</h2>
         <form action="/note" method="post">
-            <label for="note-input"></label>
-            <textarea name="note" id="note-input" placeholder="Write something..." cols="30" rows="10"></textarea><br>
-            <button id="submit">Save note</button>
-        <p></p>
+            <label for="note-input">NOTE:</label><br>
+            <textarea name="note" id="note-input" placeholder="..." cols="30" rows="10">{{ notes.note }}</textarea>
+            <br>
+            <button type="submit">Save note</button>
         </form>
     </body>
 </html>
