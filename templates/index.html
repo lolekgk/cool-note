@@ -6,6 +6,19 @@
     </head>
     <body>
         <h1>Cool Note</h1>
-        <p>My new note will be there!</p>
+        {% if notes != none %}
+            <p> {{ notes.note }}</p>
+        {% else %}
+            <p>You do not have any notes!</p>
+        {% endif %}
+        <small>Edited {{ edit_count }} times.</small>
+        <p>Click the button below to take a note!</p>
+        <button><a href="/note">
+            {% if notes != none %}
+            Edit note
+            {% else %}
+            Add note
+            {% endif %}
+        </a></button>
     </body>
 </html>
