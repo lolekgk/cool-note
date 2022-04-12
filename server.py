@@ -10,7 +10,7 @@ def main_page():
 
 @app.route('/note', methods=['GET', 'POST'])
 def note():
-    return 'This is note page!'
+    return render_template('note.html')
 
 
 if __name__ == '__main__':
