@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Cool Note</title>
 </head>
-<body>
-
-</body>
+    <body>
+        <h2>Write your note...</h2>
+        <form action="/note" method="post">
+            <label for="note-input"></label>
+            <textarea name="note" id="note-input" cols="30" rows="10"></textarea>
+            <label for="submit"></label><br>
+            <button id="submit">Submit</button>
+        <p></p>
+        </form>
+    </body>
 </html>
