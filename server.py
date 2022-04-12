@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 saved_data = {}
 
+
 @app.route('/')
 def main_page():
     notes = None
@@ -19,8 +20,10 @@ def note():
         saved_data['note'] = request.form
         saved_data['edit_count'] = saved_data.setdefault('edit_count', 0) + 1
         return redirect('/')
-    return render_template('note.html')
+    return render_template('note.html', notes=saved_data.get('note', 0))
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,
+            host='0.0.0.0',
+            port=80)
